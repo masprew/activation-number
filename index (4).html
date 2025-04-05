@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dadanz Store Number Activation</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      margin: 0;
+      background: #f1f5f9;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #111827;
+    }
+    
+    h4 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #111827;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .product {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .product:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    .label {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: 8px;
+      color: white;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ready {
+      background: #10b981;
+    }
+
+    .sold {
+      background: #6b7280;
+    }
+
+    .info {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    .region {
+      font-size: 14px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: 500;
+      color: #111827;
+      margin-top: 4px;
+    }
+
+    .desc {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid #e5e7eb;
+      display: none;
+    }
+
+    .desc .item {
+      font-size: 14px;
+      color: #374151;
+      margin: 8px 0;
+    }
+
+    .buy-btn {
+      margin-top: 12px;
+      padding: 9px 16px;
+      border: none;
+      background: #3b82f6;
+      color: white;
+      font-size: 13px;
+      font-weight: 500;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-btn:hover {
+      background: #2563eb;
+    }
+
+    .sold-style {
+      background: #e5e7eb;
+      color: #6b7280;
+      cursor: not-allowed;
+      font-size: 13px;
+      padding: 9px 16px;
+      border-radius: 8px;
+      margin-top: 12px;
+      border: 1px solid #d1d5db;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Store Nokos</h1>
+
+<div class="grid">
+
+  <!-- Produk Ready -->
+  <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+62 831 (SV 1H)</div>
+    <div class="region">Region: Indonesia</div>
+    <div class="price">Rp5.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun 1 Hari</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20+62%20812%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+62 831 (SV 1H)</div>
+    <div class="region">Region: Indonesia</div>
+    <div class="price">Rp5.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun 1 Hari</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20+62%20812%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+
+  <!-- Produk Sold -->
+  <div class="product" onclick="toggleDesc(this)">
+    <div class="label sold">SOLD</div>
+    <div class="info">+62 838</div>
+    <div class="region">Region: Indonesia</div>
+    <div class="price">Rp5.000</div>
+    <div class="desc">
+      <div class="item">• Sudah digunakan</div>
+      <div class="item">• Tidak tersedia</div>
+      <div class="sold-style">Terjual</div>
+    </div>
+  </div>
+
+<h1>Fresh (Belum Bikin)</h1>
+
+  <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+62 (Fresh)</div>
+    <div class="region">Region: Indonesia</div>
+    <div class="price">Rp5.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+63 (Fresh)</div>
+    <div class="region">Region: Philipina</div>
+    <div class="price">Rp5.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label sold">SOLD</div>
+    <div class="info">+91 (Fresh)</div>
+    <div class="region">Region: India</div>
+    <div class="price">Rp6.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp6.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+60 (Fresh)</div>
+    <div class="region">Region: Malaysia</div>
+    <div class="price">Rp10.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp10.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+66 (Fresh)</div>
+    <div class="region">Region: Thailand</div>
+    <div class="price">Rp9.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp9.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+44 (Fresh)</div>
+    <div class="region">Region: Inggris</div>
+    <div class="price">Rp10.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp10.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+    <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+57 (Fresh)</div>
+    <div class="region">Region: Colombia</div>
+    <div class="price">Rp8.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp8.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+      <div class="product" onclick="toggleDesc(this)">
+    <div class="label ready">READY</div>
+    <div class="info">+7 (Fresh)</div>
+    <div class="region">Region: Rusia</div>
+    <div class="price">Rp11.000</div>
+    <div class="desc">
+      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
+      <div class="item">• Usia akun Fresh</div>
+      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp11.000" target="_blank">Beli Sekarang</a>
+    </div>
+  </div>
+  
+
+</div>
+
+<script>
+  function toggleDesc(card) {
+    const allCards = document.querySelectorAll('.product .desc');
+    allCards.forEach(desc => {
+      if (desc !== card.querySelector('.desc')) {
+        desc.style.display = 'none';
+      }
+    });
+
+    const desc = card.querySelector('.desc');
+    desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
