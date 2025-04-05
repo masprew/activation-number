@@ -20,13 +20,6 @@
       font-size: 32px;
       color: #111827;
     }
-    
-    h4 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 24px;
-      color: #111827;
-    }
 
     .grid {
       display: grid;
@@ -139,151 +132,112 @@
 <body>
 
 <h1>Store Nokos</h1>
-
-<div class="grid">
-
-  <!-- Produk Ready -->
-  <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+62 831 (SV 1H)</div>
-    <div class="region">Region: Indonesia</div>
-    <div class="price">Rp5.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun 1 Hari</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20+62%20812%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+62 831 (SV 1H)</div>
-    <div class="region">Region: Indonesia</div>
-    <div class="price">Rp5.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun 1 Hari</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20+62%20812%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-
-  <!-- Produk Sold -->
-  <div class="product" onclick="toggleDesc(this)">
-    <div class="label sold">SOLD</div>
-    <div class="info">+62 838</div>
-    <div class="region">Region: Indonesia</div>
-    <div class="price">Rp5.000</div>
-    <div class="desc">
-      <div class="item">• Sudah digunakan</div>
-      <div class="item">• Tidak tersedia</div>
-      <div class="sold-style">Terjual</div>
-    </div>
-  </div>
+<div class="grid" id="produk-container">
+  <!-- Produk akan ditampilkan secara dinamis -->
+</div>
 
 <h1>Fresh (Belum Bikin)</h1>
-
-  <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+62 (Fresh)</div>
-    <div class="region">Region: Indonesia</div>
-    <div class="price">Rp5.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+63 (Fresh)</div>
-    <div class="region">Region: Philipina</div>
-    <div class="price">Rp5.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp5.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label sold">SOLD</div>
-    <div class="info">+91 (Fresh)</div>
-    <div class="region">Region: India</div>
-    <div class="price">Rp6.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp6.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+60 (Fresh)</div>
-    <div class="region">Region: Malaysia</div>
-    <div class="price">Rp10.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp10.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+66 (Fresh)</div>
-    <div class="region">Region: Thailand</div>
-    <div class="price">Rp9.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp9.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+44 (Fresh)</div>
-    <div class="region">Region: Inggris</div>
-    <div class="price">Rp10.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp10.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-    <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+57 (Fresh)</div>
-    <div class="region">Region: Colombia</div>
-    <div class="price">Rp8.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp8.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-      <div class="product" onclick="toggleDesc(this)">
-    <div class="label ready">READY</div>
-    <div class="info">+7 (Fresh)</div>
-    <div class="region">Region: Rusia</div>
-    <div class="price">Rp11.000</div>
-    <div class="desc">
-      <div class="item">• Cocok untuk verifikasi WhatsApp</div>
-      <div class="item">• Usia akun Fresh</div>
-      <a class="buy-btn" href="https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20dengan%20harga%20Rp11.000" target="_blank">Beli Sekarang</a>
-    </div>
-  </div>
-  
-
+<div class="grid" id="fresh-container">
+  <!-- Produk fresh akan ditampilkan secara dinamis -->
 </div>
 
 <script>
-  function toggleDesc(card) {
-    const allCards = document.querySelectorAll('.product .desc');
-    allCards.forEach(desc => {
-      if (desc !== card.querySelector('.desc')) {
-        desc.style.display = 'none';
-      }
-    });
+  const produk = [
+    {
+      status: 'READY',
+      info: '+62 831 (SV 1H)',
+      region: 'Indonesia',
+      harga: 'Rp5.000',
+      desc: ['Cocok untuk verifikasi WhatsApp', 'Usia akun 1 Hari'],
+      wa: 'https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20+62%20831%20dengan%20harga%20Rp5.000'
+    },
+    {
+      status: 'SOLD',
+      info: '+62 838',
+      region: 'Indonesia',
+      harga: 'Rp5.000',
+      desc: ['Sudah digunakan', 'Tidak tersedia'],
+      wa: ''
+    }
+  ];
 
-    const desc = card.querySelector('.desc');
-    desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+  const fresh = [
+    { code: '+62', region: 'Indonesia', price: 'Rp5.000' },
+    { code: '+63', region: 'Filipina', price: 'Rp5.000' },
+    { code: '+91', region: 'India', price: 'Rp6.000', status: 'SOLD' },
+    { code: '+60', region: 'Malaysia', price: 'Rp10.000' },
+    { code: '+66', region: 'Thailand', price: 'Rp9.000' },
+    { code: '+44', region: 'Inggris', price: 'Rp10.000' },
+    { code: '+57', region: 'Colombia', price: 'Rp8.000' }
+  ];
+
+  function createProduk(el, isFresh = false) {
+    const container = document.createElement('div');
+    container.className = 'product';
+    container.onclick = () => toggleDesc(container);
+
+    const status = el.status === 'SOLD' ? 'sold' : 'ready';
+    const label = document.createElement('div');
+    label.className = 'label ' + status;
+    label.textContent = status.toUpperCase();
+    container.appendChild(label);
+
+    const info = document.createElement('div');
+    info.className = 'info';
+    info.textContent = isFresh ? `${el.code} (Fresh)` : el.info;
+    container.appendChild(info);
+
+    const region = document.createElement('div');
+    region.className = 'region';
+    region.textContent = 'Region: ' + el.region;
+    container.appendChild(region);
+
+    const price = document.createElement('div');
+    price.className = 'price';
+    price.textContent = el.harga || el.price;
+    container.appendChild(price);
+
+    const desc = document.createElement('div');
+    desc.className = 'desc';
+    const desc1 = document.createElement('div');
+    desc1.className = 'item';
+    desc1.textContent = '• Cocok untuk verifikasi WhatsApp';
+    desc.appendChild(desc1);
+
+    const desc2 = document.createElement('div');
+    desc2.className = 'item';
+    desc2.textContent = isFresh ? '• Usia akun Fresh' : (el.desc?.[1] || '');
+    desc.appendChild(desc2);
+
+    if (status === 'sold') {
+      const soldDiv = document.createElement('div');
+      soldDiv.className = 'sold-style';
+      soldDiv.textContent = 'Terjual';
+      desc.appendChild(soldDiv);
+    } else {
+      const btn = document.createElement('a');
+      btn.className = 'buy-btn';
+      btn.href = el.wa || `https://wa.me/62881026358641?text=Halo,%20saya%20ingin%20membeli%20nokos%20${isFresh ? el.code : el.info}%20dengan%20harga%20${el.price || el.harga}`;
+      btn.target = '_blank';
+      btn.textContent = 'Beli Sekarang';
+      desc.appendChild(btn);
+    }
+
+    container.appendChild(desc);
+    return container;
+  }
+
+  const produkContainer = document.getElementById('produk-container');
+  const freshContainer = document.getElementById('fresh-container');
+
+  produk.forEach(item => produkContainer.appendChild(createProduk(item)));
+  fresh.forEach(item => freshContainer.appendChild(createProduk(item, true)));
+
+  function toggleDesc(el) {
+    const desc = el.querySelector('.desc');
+    const isShown = desc.style.display === 'block';
+    document.querySelectorAll('.desc').forEach(d => d.style.display = 'none');
+    desc.style.display = isShown ? 'none' : 'block';
   }
 </script>
 
